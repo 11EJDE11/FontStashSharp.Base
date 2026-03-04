@@ -124,7 +124,7 @@ namespace FontStashSharp.Rasterizers.StbTrueTypeSharp
 
 		public float CalculateScaleForTextShaper(float fontSize)
 		{
-			return stbtt_ScaleForPixelHeight(_font, fontSize);
+			return stbtt_ScaleForMappingEmToPixels(_font, fontSize);
 		}
 	}
 }
