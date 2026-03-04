@@ -56,7 +56,7 @@ namespace FontStashSharp.Rasterizers.StbTrueTypeSharp
 			GC.SuppressFinalize(this);
 		}
 
-		private float CalculateScale(float size) => stbtt_ScaleForPixelHeight(_font, size);
+		private float CalculateScale(float size) => stbtt_ScaleForMappingEmToPixels(_font, size);
 
 		public void GetMetricsForSize(float fontSize, out int ascent, out int descent, out int lineHeight)
 		{
